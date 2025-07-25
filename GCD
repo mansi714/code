@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int GCD(int a, int b) {
+    if(b==0) {
+        return a;
+    }
+    else {
+        return GCD(b,a%b);
+    }
+}
+int main() {
+    int a=12;
+    int b=18;
+    cout<<GCD(a,b);
+}
+
+ALGO:- 1. Take two user input a,b
+2. if b==0, a is answer
+else change the value of a,b
+a=b;
+b=a%b;
+3. now repeat same step 2 again until you get b=0
