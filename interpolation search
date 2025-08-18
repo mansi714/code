@@ -1,0 +1,31 @@
+ #include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10,20,30,40,50};
+    int value=40;
+    int index=-1;
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int low=0;
+    int high=n-1;
+    while(low<=high) {
+    int pos = low +((value-arr[low] * (high-low))/(arr[high]-arr[low]));
+    if(arr[pos]==value) {
+        index=pos;
+        break;
+    }
+    else if(arr[pos]<value) {
+        low = pos+1;
+    
+    }
+else {
+    high=pos-1;
+}
+}
+if(index==-1) {
+    cout<<"not found";
+}
+else {
+    cout<<"found at index"<<index;
+}
+}
