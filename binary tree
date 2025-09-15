@@ -14,7 +14,7 @@ Node * insert(Node * root, int arr[], int i, int n) {
 if(i<n) {
     Node*temp = new Node(arr[i]);
     root = temp;
-    root-> left = insert(root-> left, arr, 2*i+2, n);
+    root-> left = insert(root-> left, arr, 2*i+1, n);
     root-> right = insert(root-> right, arr, 2*i+2, n);
 }
 
